@@ -50,7 +50,7 @@ const shoppingCart = {
     id: "CART001",
     userId: null, // or null for guest
     items: [],
-    currency: "USD",
+    currency: "KES",
     subtotal: 0,
     tax: 0,
     shipping: 0,
@@ -148,7 +148,7 @@ const shoppingCart = {
             cartItems.innerHTML = this.items.map(item => `
                 <div class="cart-item">
                     <div class="cart-item-image">
-                    <img src="${item.image}" alt="${item.productName}">
+                        <img src="${item.image}" alt="${item.productName}">
                     </div>
                     <div class="cart-item-details">
                         <div class="cart-item-name">${item.productName}</div>
@@ -408,10 +408,11 @@ function initApp() {
     });
 }
 
-// Checkout button should interact with backend via RESTApis in future
+// Checkout button should interact with backend via RESTful APIs in future
 const checkOutBtn = document.querySelector(".checkout-btn");
 
 checkOutBtn.addEventListener("click",() => window.alert("Backend coming soon! But thanks for trying out my app?"));
 
 // Start the app when DOM is loaded
+
 document.addEventListener('DOMContentLoaded', initApp);
